@@ -13,17 +13,23 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     <link rel="stylesheet" href="fonty/css/fontello.css" type="text/css" />
+    <link rel="stylesheet" href="fontyinne/css/fontello.css" type="text/css" />
     <link rel="stylesheet" href="fontyjs/css/fontello.css" type="text/css" />
 	
+    <script type="text/javascript" src="js/script.js" ></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.scrollTo.min.js" ></script>
-    <script type="text/javascript" src="js/jquery.scroll.reset.js"></script>
-    <script type="text/javascript" src="js/slider.js" async></script>
-    <script type="text/javascript" src="js/jquery.sticky.js"></script>
-    <script type="text/javascript" src="js/scrollShow.js" async></script>
+
 	
 </head>
-<body onload = "hide(); var k1=window.setTimeout('showonload();', 500);">
+<body>
+    
+    <div id="toTop">
+        <i class="icon-eject-alt-outline"></i>
+    </div>
+    
+    <div id="top"></div>
+    
     <header>
 	<div class="top">
             <i class="icon-mobile" style="font-size: 19px;"></i> +48 789 986 356 <i class="icon-mail-alt"                 style="margin-left: 50px;"></i> superbhp@aleopcja.pl
@@ -81,7 +87,7 @@
 	<div class="section1">  
             <h1 id="aboutme">O mnie</h1>
                 <div class="wraper1">
-                    <div id="slider1" onclick="sliderminus()">
+                    <div id="slider1">
                        <i class="icon-left-open"></i>
                     </div>
                 </div>
@@ -108,7 +114,7 @@
 
 		</div>
 		<div class="wraper2">	
-                    <div id="slider2" onclick="sliderplus()">
+                    <div id="slider2">
                        	<i class="icon-right-open"></i>
                     </div>
                 </div>
@@ -134,7 +140,6 @@
 			<h2>Doradztwo</h2>
 			<p>Duis a varius leo, at rhoncus ante. Quisque vel consectetur lectus. Suspendisse potenti. Proin vel ipsum sit amet velit tempus dictum. Vivamus a finibus lorem. Sed laoreet vestibulum libero, scelerisque consectetur neque iaculis maximus.<p>
                     </div>
-                    
 		</div>
         </div>
         
@@ -155,45 +160,14 @@
 				</div>
 				
 				<div class="box2">
-				
 					<p><a class="linkcontact" href="#" target="_blank"><i class="icon-facebook-squared" style="font-size: 60px;"></i></a></p>
 				
 				</div>
-			
 		</div>
 		
 		<div id="footer">
 			Wszelkie prawa zastrzeżone &copy Damian Kaczmarek BHP 2017 | mob. +48 789 986 356 | e-mail: superbhp@aleopcja.pl
 		</div>
 	</div>
-
-<script src="jquery-3.2.1.min.js"></script>
-	<script>
-
-	$(document).ready(function() {
-	var NavY = $('.menu').offset().top;
-	 
-	var stickyNav = function()
-        {
-            var ScrollY = $(window).scrollTop();
-		  
-            if (ScrollY > NavY) 
-            { 
-                $('.menu').addClass('sticky');
-            } 
-            else 
-            {
-		$('.menu').removeClass('sticky'); 
-            }
-	};
-	 
-	stickyNav();
-	 
-	$(window).scroll(function() {
-		stickyNav();
-	});
-	});
-	
-</script>
 </body>
 </html>
