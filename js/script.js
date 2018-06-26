@@ -10,8 +10,6 @@ window.onload = function()
         $('#box2').fadeOut(0);
         $('#slider1').fadeOut(0);
         $('#slider2').fadeOut(0);
-
-
     }
 
     showonload();
@@ -134,7 +132,6 @@ window.onload = function()
             toTop.style.visibility = "visible";
             $('#toTop').fadeIn(500);
         }
-            
         else
         {
             toTop.style.visibility = "hidden";
@@ -144,51 +141,16 @@ window.onload = function()
     
     $('#toTop').click(function() { $.scrollTo($('#top'), 500); });
     
-    
-    
     /*  FUNKCJA ODPOWIADAJĄCE ZA SEKCJĘ Z OFERTĄ */
     
-    
-    var szkolenia = $('#szkolenia');
-
-    szkolenia.fadeOut();           
-
     $(window).scroll(function()
     {
-        if($(window).scrollTop() > 510)
+        var offer = document.getElementById("offer1");
+        var yScrollAxis = window.pageYOffset;
+        
+        if(yScrollAxis > (offer.offsetTop - 450))
         {
-            szkolenia.fadeIn(700);
+           offer.setAttribute("id", "offer12");
         }
     });
-
-
-    //skrypt dla tekstu z adytem
-
-    var audyty = $('#audyty');
-
-    audyty.fadeOut();       
-
-    $(window).scroll(function()
-    {
-        if($(window).scrollTop() >= 730)
-        {
-            audyty.fadeIn(700);
-        }
-    });
-
-
-    //skrypt dla tekstu z adytem
-
-    var doradztwo = $('#doradztwo');
-
-    doradztwo.fadeOut();
-
-    $(window).scroll(function()
-    {
-        if($(window).scrollTop() >= 850)
-        {
-            doradztwo.fadeIn(700);
-        }
-    });
-    
 };

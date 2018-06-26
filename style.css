@@ -219,14 +219,32 @@ h2
     color: #000;
 }
 
-.offer1
+#offer1
 {
+    opacity: 0;
+    position: relative;
     width: 1000px;
     text-align: center;
     color: #000;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+    -webkit-transition: opacity 1.5s;
+    transition: opacity 1.5s;
+}
+
+#offer12
+{
+    opacity: 1;
+    position: relative;
+    width: 1000px;
+    text-align: center;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    -webkit-transition: opacity 1.5s;
+    transition: opacity 1.5s;
 }
 
 .section3
