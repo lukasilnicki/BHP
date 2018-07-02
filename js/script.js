@@ -93,8 +93,6 @@ window.onload = function()
 	}
 	};
 	 
-	stickyNav();
-	 
 	$(window).scroll(function() {
 		stickyNav();
 	});
@@ -143,14 +141,15 @@ window.onload = function()
     
     /*  FUNKCJA ODPOWIADAJĄCE ZA SEKCJĘ Z OFERTĄ */
     
-    $(window).scroll(function()
-    {
-        var offer = document.getElementById("offer1");
-        var yScrollAxis = window.pageYOffset;
+    $(document).ready(function(){
         
-        if(yScrollAxis > (offer.offsetTop - 450))
-        {
-           offer.setAttribute("id", "offer12");
-        }
+        $('#offer1').addClass('hide').each(function(){
+        $(this).viewportChecker({
+            classToAdd: 'show animated fadeIn',
+            classToRemove: 'hide',
+            offset: '30%'
+      });
+    });
+
     });
 };

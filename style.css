@@ -14,7 +14,8 @@ header
 
 .top
 {
-	height: 30px;
+       position: relative;     
+    height: 30px;
 	background-color: #3156a1;
 	text-align: right;
 	font-size: 15px;
